@@ -1,0 +1,97 @@
+*{
+  background-color: grey;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  font-size: 40px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+}
+.board{
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.line{
+  display: flex;
+  gap: 5px;
+}
+.tile {
+  width: 55px;
+  height: 55px;
+  border: 2px solid black;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.correct {
+    background-color: rgb(127, 206, 8);
+  }
+  .close {
+    background-color: yellow;
+  }
+  .wrong {
+    background-color: grey;
+  }
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  }
+  .line1 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+  }
+  .line2 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2px;
+  }
+  .line3 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2px;
+  }
+  
+  .key {
+    width: 45px;
+    height: 63px;
+    margin: 3px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+  }
+
+  #big {
+    width: 100px;
+  }
+  #green {
+    background-color: green;
+  }
+
