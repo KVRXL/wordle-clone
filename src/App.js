@@ -5,7 +5,7 @@ import {Keyboard} from './components/Keyboard';
 
 export const AppContext = createContext();
 
-const API_URL = 'https://my-wordle-api-clone.herokuapp.com'
+const API_URL = 'https://my-wordle-clone-api.herokuapp.com'
 
 function App() {
 const [solution, setSolution] = useState('');
@@ -68,13 +68,16 @@ useEffect(() => {
     const fetchWord = async () => {
       const response = await fetch(API_URL);
       const words = await response.json();
-      setWordsList(words)
-      const randomWord = words[Math.floor(Math.random() * words.length)]
+      const upper = words.map(element => {
+        return element.toUpperCase();
+      });
+      setWordsList(upper)
+      const randomWord = upper[Math.floor(Math.random() * upper.length)]
       setSolution(randomWord)
     }
-
     fetchWord();
   }, []);
+
 
   return (
     <div>
@@ -108,6 +111,7 @@ useEffect(() => {
     <div className = 'keyboard'>
       <Keyboard  />
     </div>
+    {solution}
     </AppContext.Provider>
     </div>
   )
